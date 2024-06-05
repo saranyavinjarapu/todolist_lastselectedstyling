@@ -1,3 +1,8 @@
+body {
+	max-width: 100% !important;
+	margin: auto;
+}
+
 /* used for things that should be hidden in the ui,
 but useful for people who use screen readers */
 .visually-hidden {
@@ -34,5 +39,62 @@ but useful for people who use screen readers */
 	}
 	to {
 		color: #000000;
+	}
+}
+
+.todoapp {
+	margin: 130px !important;
+}
+
+.header-columns {
+	display: grid;
+	grid-template-columns: 1fr 250px 250px;
+	gap: 4px;
+}
+
+#todo-input {
+	text-align: left;
+	justify-content: center;
+	align-items: center;
+}
+
+.time-stamp {
+	background: rgba(0, 0, 0, 0.003);
+	font-style: italic;
+	border-left: 1px solid lightgray;
+	height: 65px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.3rem;
+	font-weight: 300;
+	color: rgba(0, 0, 0, 0.4);
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.4em;
+}
+
+.view {
+	display: grid;
+	grid-template-columns: 1fr 250px 250px;
+	gap: 4px;
+}
+
+.todo-content {
+	position: relative;
+}
+
+.view .time-stamp {
+	font-size: 1.2rem;
+}
+
+@media (width<=950px) {
+	.view {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.header-columns {
+		grid-template-columns: 1fr 1fr 1fr;
+		word-wrap: break-word;
 	}
 }
