@@ -27,12 +27,16 @@ but useful for people who use screen readers */
 .toggle-all-label {
 	pointer-events: none;
 }
+.todoapp {
+	margin: 130px !important;
+}
 
-.todo-list li label {
+/* add initial color and transition to todo list labels,
+  referenced ul.todo-list to increase specificity */
+ul.todo-list li label {
 	color: #ff0000;
 	animation: changeColor 15s ease-in both;
 }
-
 @keyframes changeColor {
 	from {
 		color: #ff0000;
@@ -40,10 +44,6 @@ but useful for people who use screen readers */
 	to {
 		color: #000000;
 	}
-}
-
-.todoapp {
-	margin: 130px !important;
 }
 
 .header-columns {
@@ -96,4 +96,16 @@ but useful for people who use screen readers */
 		grid-template-columns: 1fr 1fr 1fr;
 		word-wrap: break-word;
 	}
+}
+
+ul.todo-list li label.last1 {
+	color: green;
+}
+
+ul.todo-list li label.last2 {
+	color: magenta;
+}
+
+ul.todo-list li label.last3 {
+	color: yellow;
 }

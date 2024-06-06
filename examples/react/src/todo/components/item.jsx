@@ -65,6 +65,7 @@ export const Item = memo(function Item({ todo, dispatch, index }) {
 							/>
 							<label
 								data-testid="todo-item-label"
+								id={todo.id}
 								onDoubleClick={handleDoubleClick}
 							>
 								{title}
